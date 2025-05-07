@@ -11,7 +11,7 @@ export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
 }
 
-export default function Prodotto({ params }: PageProps) {
+export default async function Prodotto({ params }: PageProps) {
   const product = products.find((p) => p.slug === params.slug);
 
   if (!product) {
