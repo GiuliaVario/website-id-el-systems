@@ -5,6 +5,7 @@ import "@/app/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+// Font
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -14,6 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// SEO
 export const metadata: Metadata = {
   title: {
     default: "Id. El. Systems",
@@ -22,6 +24,7 @@ export const metadata: Metadata = {
   description: "Impianti elettrici e soluzioni tecnologiche",
 };
 
+// Layout
 export default function RootLayout({
   children,
 }: {
@@ -30,13 +33,10 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased leading-relaxed`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased leading-relaxed bg-white text-neutral-900`}
       >
         <Header />
-        {/* Main senza padding top e con container centrato */}
-        <main className="pt-0 min-h-screen">
-          {children}
-        </main>
+        <main className="pt-0 min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
