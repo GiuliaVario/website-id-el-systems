@@ -5,8 +5,3 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
   
-[[redirects]]
-  rom = "/"
-  to = "/hero"
-  status = 301
-
