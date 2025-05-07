@@ -1,17 +1,15 @@
 import ProductPage from "@/components/ProductPage";
 import { products } from "@/data/products";
 
-type PageProps = {
-  params: {
-    slug: string;
-  };
-};
-
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
 }
 
-export default async function Prodotto({ params }: PageProps) {
+export default async function Prodotto({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const product = products.find((p) => p.slug === params.slug);
 
   if (!product) {
@@ -20,3 +18,4 @@ export default async function Prodotto({ params }: PageProps) {
 
   return <ProductPage product={product} />;
 }
+
