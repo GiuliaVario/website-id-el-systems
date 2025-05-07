@@ -7,6 +7,6 @@
   
 [[redirects]]
   rom = "/"
-  to = "/home"
+  to = "/hero"
   status = 301
 
