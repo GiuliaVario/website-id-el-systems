@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+     darkMode: false
     content: [
       "./src/**/*.{ts,tsx}",   // scansiona tutti i componenti e le pagine
     ],
