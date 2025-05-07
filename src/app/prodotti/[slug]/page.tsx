@@ -19,3 +19,4 @@ export default async function Prodotto({
   return <ProductPage product={product} />;
 }
 
+
